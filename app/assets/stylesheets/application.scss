@@ -43,6 +43,21 @@ section {
   background: #fff;
   overflow: hidden;
 }
+/*===================================
+              Content Boxes
+===================================*/
+// .content-box-lg {
+//   padding: 120px 0;
+// }
+//
+// .content-box-md {
+//   padding: 100px 0;
+// }
+//
+// .content-box-sm {
+//   padding: 90px 0;
+// }
+
 
 /*-----------------------------
             Top Page
@@ -86,18 +101,75 @@ text-align: center;
   border-radius: 50%;
   width: 40px;
 }
+/* carousel */
+
+.carousel-caption {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, #27A6BA 0%, rgba(6,229,137,0.84) 100%) no-repeat 50% 50% / 100% 100%;
+  opacity: 0.8;
+  background-size: cover;
+}
 /*-----------------------------
             sign_in
 ------------------------------*/
 #sign_in-form {
-  background: #f4f4f4;
   height: 100%;
+  background: linear-gradient(180deg, #27A6BA 0%, rgba(6,229,137,0.84) 100%) no-repeat 50% 50% / 100% 100%;
+  opacity: 0.8;
+  background-size: cover;
 }
-.col-md-6 .offset-md-3 .sign_in {
-  padding: 15%;
+#sign_in-form .content-box-lg {
+padding-top: 20px;
 }
+
+/* login */
+#log_in-form {
+
+  height: 100%;
+  background: linear-gradient(180deg, rgba(252,57,57,0.72) 0%, rgba(255,0,230,0.75) 100%) no-repeat 50% 50% / 100% 100%;
+  opacity: 0.8;
+  background-size: cover;
+}
+#log_in-form .content-box-lg {
+padding-top: 20px;
+}
+
+/* Edit */
+#edit_in-form {
+
+  height: 100%;
+  background: linear-gradient(360deg, rgba(252,57,149,0.72) 0%, rgba(255,170,0,0.75) 100%) no-repeat 50% 50% / 100% 100%;
+  opacity: 0.8;
+  background-size: cover;
+}
+#edit_in-form .content-box-lg {
+padding-top: 20px;
+}
+
+/* forms */
 .form-s {
   background-color: #fff;
+  padding: 10px 25px 120px 25px;
+  box-shadow: 0px 9px 3px -3px rgba(0,0,0,0.6);
+}
+.form-s h2 {
+  line-height: 100px;
+}
+.form-s .form-control {
+  height: 50px;
+}
+.form-s .form-check {
+  transform: translateX(70px);
+  top: 18px;
+}
+.btn-primary {
+  color: #fff;
+background-color: #007bff;
+border-color: #007bff;
+}
+.actions {
+padding-top: 30px;
 }
 /*-----------------------------
             Footer

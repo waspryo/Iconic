@@ -10,11 +10,11 @@
           <h4 class="text-white">ようこそ</h4>
           <ul class="list-unstyled">
             <% if (!user_signed_in?) %>
-              <li><%= link_to "Login", new_user_session_path %></li>
-              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <li><%= link_to "ログイン", new_user_session_path %></li>
+              <li><%= link_to "サインアップ", new_user_registration_path %></li>
             <% else %>
 
-              <li><%= image_tag avatar_url(current_user), class: "img-circle avatar_small" %>&nbsp;<%= current_user.email %>さん
+              <li><%= image_tag avatar_url(current_user), class: "img-circle avatar_small" %>&nbsp;<%= current_user.fullname %>さん
               </li>
               <li><%= link_to "プロフィールを編集する", edit_user_registration_path %></li>
               <li><%= link_to "ログアウトする", destroy_user_session_path, method: :delete %></li>
