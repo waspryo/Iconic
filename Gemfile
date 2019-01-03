@@ -49,3 +49,5 @@ gem 'jquery-rails'
 
 gem 'devise'
 gem 'toastr-rails'
+# Web Scraping
+gem 'nokogiri'
