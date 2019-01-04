@@ -51,3 +51,7 @@ gem 'devise'
 gem 'toastr-rails'
 # Web Scraping
 gem 'nokogiri'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'

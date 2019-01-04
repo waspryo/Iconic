@@ -11,6 +11,7 @@
       white Smoke:        #f4f4f4
       white:              #fff
       Black:              #000
+      Dark gray :         #36353c;
 ===================================*/
 /*===================================
               Html, body
@@ -82,6 +83,9 @@ height: 100%;
 .col-sm-2  {
   padding: 0;
 }
+.carousel-caption {
+
+}
 .carousel-caption h1{
   color: #000;
   text-align: center;
@@ -102,13 +106,17 @@ text-align: center;
   width: 40px;
 }
 /* carousel */
+.carousel-item {
+  position: relative;
+}
 
-.carousel-caption {
+.col-sm-4 .carousel-caption{
+  position: absolute;
   height: 100%;
   width: 100%;
-  background: linear-gradient(180deg, #27A6BA 0%, rgba(6,229,137,0.84) 100%) no-repeat 50% 50% / 100% 100%;
-  opacity: 0.8;
-  background-size: cover;
+  top: 0px;
+  left: 0px;
+  padding: 60px;
 }
 /*-----------------------------
             sign_in
@@ -168,9 +176,7 @@ padding-top: 20px;
 background-color: #007bff;
 border-color: #007bff;
 }
-.actions {
-padding-top: 30px;
-}
+
 /*-----------------------------
             Footer
 ------------------------------*/
@@ -180,4 +186,14 @@ footer {
 }
 footer p {
   margin-bottom: 0;
+}
+.box-form {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 50px;
+	width: 200px;
+	margin: auto;
 }
