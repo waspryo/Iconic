@@ -1,20 +1,6 @@
-<div id="sign_in-form">
-	<div class="content-box-lg">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-          <div class="field">
-					
+<h1>Editing Post</h1>
 
+<%= render 'form', post: @post %>
 
-
-
-
-				</div>
-				<div class="col-md-8">
-					<h1>Hello</h1>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>

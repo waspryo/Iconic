@@ -1,45 +1,5 @@
-<div id="sign_in-form">
-	<div class="content-box-lg">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
+<h1>New Post</h1>
 
+<%= render 'form', post: @post %>
 
-					<hr>
-					<%= form_for @post, url: posts_show_path do |f| %>
-					<p><%=f.label "投稿者" %><br><%= f.text_field :title, placeholder: 'ハンドルネーム' %></p>
-					<p><%=f.label "投稿者" %><br><%= f.text_field :content, placeholder: 'ハンドルネーム' %></p>
-					<p><%=f.label "画像をアップロード" %><br><%= f.file_field :image %></p>
-					<p><%= f.submit value: '投稿', class: 'btn btn-primary' %></p>
-				<% end %>
-
-			</div>
-			<div class="col-md-8">
-				<%= form_for(posts_show_path) do |f| %>
-	  <% if @post.errors.any? %>
-	    <div id="error_explanation">
-	      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-	      <ul>
-	      <% @post.errors.full_messages.each do |message| %>
-	        <li><%= message %></li>
-	      <% end %>
-	      </ul>
-	    </div>
-	  <% end %>
-
-	  <div class="field">
-	    <%= f.label :image %><br>
-	    <!-- 下2行を変更 -->
-	    <%#= f.text_field :image %>
-	    <%= f.file_field :image %>
-	  </div>
-	  <div class="actions">
-	    <%= f.submit %>
-	  </div>
-	<% end %>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
+<%= link_to 'Back', posts_path %>

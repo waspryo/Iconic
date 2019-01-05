@@ -1,16 +1,32 @@
-<div id="sign_in-form">
-  <div class="content-box-lg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
+<%= form_with(model: post, local: true) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-        
-
-      </div>
-      <div class="col-md-8">
-        <h1>Hello</h1>
-      </div>
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
   </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
 </div>
-</div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
