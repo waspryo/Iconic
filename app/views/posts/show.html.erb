@@ -1,0 +1,23 @@
+<div id="sign_in-form">
+	<div class="content-box-lg">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<p>
+
+						<iframe src="//coub.com/embed/1k7qah?muted=false&autostart=false&originalSize=false&startWithHD=false" allowfullscreen="allowfullscreen" frameborder="0" width="500" height="360" allow="autoplay"></iframe>
+					</div>
+					<div class="col-md-4">
+						<% @posts.each do |post| %>
+							<p>
+								<tr>
+         					<td><%= image_tag @post.image.to_s %></td>
+      					 </tr>
+							</p>
+						<% end %>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
+  post "posts/new"
+  post "posts/show"
+  get "posts/show"
+  get "posts/new"
+  get "posts/_form"
+  get "posts/edit"
+  get 'pages/home'
+  get 'pages/show'
+  get 'pages/contact'
+  root 'pages#home'
+
   devise_for :users,
   controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
-  get 'pages/home'
-  get 'pages/contact'
-  root 'pages#home'
+
+
+
 
 end

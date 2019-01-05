@@ -6,6 +6,9 @@ class User < ApplicationRecord
 
   validates :fullname, presence: true, length: {maximum: 50}
 
+  has_many :posts
+ mount_uploader :image, ImageUploader
+
   def self.find_for_oauth(auth)
    user = User.where(uid: auth.uid, provider: auth.provider).first
 
