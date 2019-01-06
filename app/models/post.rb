@@ -1,8 +1,12 @@
 class Post < ApplicationRecord
    mount_uploader :image, ImageUploader
+     belongs_to :user, optional: true
 
-   
 
+     validates :name, presence: true
+     validates :age, presence: true
+     validates :occupation, presence: true
+     validates :location, presence: true
 
    private
    def update_image_attributes
