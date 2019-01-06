@@ -178,6 +178,29 @@ border-color: #007bff;
 }
 
 /*-----------------------------
+            Posts page
+------------------------------*/
+.top-title h3 {
+  line-height: 20px;
+  padding: 45px 0 45px 0;
+  font-size: 40px;
+  letter-spacing: 10px;
+}
+.card {
+  width: 800px;
+}
+.card img {
+vertical-align: middle;
+border-style: none;
+height: 100%;
+max-width: 100%;
+transform: translateX(0px);
+}
+
+.pillar{
+    height: 100%;
+}
+/*-----------------------------
             Footer
 ------------------------------*/
 footer {

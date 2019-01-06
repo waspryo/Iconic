@@ -1,31 +1,63 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="col-md-12">
 
-<h1>Posts</h1>
+      <div class="horizontal-heading">
+        <div class="col-md-12 text-center">
+          <p id="notice"><%= notice %></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+          <h1>Posts</h1>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= post.image %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+          <!-- <table> <thead> <tr> <th>name</th> <th>Content</th> <th>Image</th> <th colspan="3"></th> </tr> </thead> <tbody> <% @posts.each do |post| %> <tr> <td><%= post.name %></td> <td><%= post.content %></td> <td><%= post.image %></td> <td><%= link_to'Show', post %></td> <td><%= link_to 'Edit', edit_post_path(post) %></td> <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td> </tr> <% end %> </tbody> </table> -->
 
-<br>
+          <br>
 
-<%= link_to 'New Post', new_post_path %>
+      
+        </div>
+      </div>
+      <div class="row">
+        <% @posts.each do |post| %>
+        <div class="col-md-8">
+          <div class="card" style="width:700px;">
+            <%= image_tag post.image.to_s, class: "img-responsive"%>
+            <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div><br><br><br><br>
+
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div><br><br><br>
+        </div>
+
+
+          <div class="col-md-4 vcenter pillar">
+
+
+                <%= link_to "Update", edit_post_path(post), class: "btn btn-form" %>
+                <br><br>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Name:
+                    <%= post.name %></li>
+                  <li class="list-group-item">Age:
+                    <%= post.age %></li>
+                  <li class="list-group-item">Occupation:
+                    <%= post.occupation %></li>
+                  <li class="list-group-item">Location:
+                    <%= post.location %></li>
+                </ul>
+
+              </div>
+                  <% end %>
+              <hr/>
+
+          </div>
+        </div>
+      </div>
+
+
+
+  </div>
+
+</div>
+</div>

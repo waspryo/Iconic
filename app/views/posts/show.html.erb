@@ -1,21 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center fluid">
+      <div class="top-title">
+        <h3>STYLE</h3>
+      </div>
+    </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @post.image %>
-  <%= image_tag @post.image.url %>
-</p>
+  </div>
+  <div class="row">
+    <div class="col-md-9 text-center">
+      <p id="notice"><%= notice %></p>
+      <p>
+        <%= image_tag @post.image.url %>
+      </p>
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+      <%= link_to 'Edit', edit_post_path(@post),class: "btn btn-primary btn-large" %> |
+      <%= link_to 'Back', posts_path, class: "btn btn-primary btn-large"%>
+      <%= link_to '投稿', pages_show_path, class: "btn btn-primary btn-large"%>
+
+
+    </div>
+
+    <div class="col-md-3">
+      <div class="person-lists">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Name: <%= @post.name %></li>
+          <li class="list-group-item">age: <%= @post.age %></li>
+          <li class="list-group-item">Occupation: <%= @post.occupation %></li>
+          <li class="list-group-item">Item: <%= @post.content %></li>
+          <li class="list-group-item">Location: <%= @post.location %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="person-lists">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Name: <%= @post.name %></li>
+          <li class="list-group-item">age: <%= @post.age %></li>
+          <li class="list-group-item">Occupation: <%= @post.occupation %></li>
+          <li class="list-group-item">Item: <%= @post.content %></li>
+          <li class="list-group-item">Location: <%= @post.location %></li>
+        </ul>
+      </div>
+    </div>
+
+
+  </div>
+</div>

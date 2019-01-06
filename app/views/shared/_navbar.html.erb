@@ -17,6 +17,8 @@
               <li><%= image_tag avatar_url(current_user), class: "img-circle avatar_small" %>&nbsp;<%= current_user.fullname %>さん
               </li>
               <li><%= link_to "プロフィールを編集する", edit_user_registration_path %></li>
+              <li><%= link_to "投稿する", new_post_path %></li>
+              <!-- <li><%= link_to "投稿を編集する", posts_edit_path(@post) %></li> -->
               <li><%= link_to "ログアウトする", destroy_user_session_path, method: :delete %></li>
 
             <% end %>

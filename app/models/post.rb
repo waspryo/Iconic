@@ -1,6 +1,8 @@
 class Post < ApplicationRecord
    mount_uploader :image, ImageUploader
 
+   
+
 
    private
    def update_image_attributes
