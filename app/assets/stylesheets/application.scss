@@ -134,14 +134,14 @@ padding-top: 20px;
 /* login */
 #log_in-form {
 
-  height: 100%;
+  height: 1000px;
   background: linear-gradient(180deg, rgba(252,57,57,0.72) 0%, rgba(255,0,230,0.75) 100%) no-repeat 50% 50% / 100% 100%;
   opacity: 0.8;
   background-size: cover;
 }
 #log_in-form .content-box-lg {
 padding-top: 30px;
-padding-bottom: 300px;
+
 }
 
 /* Edit */
@@ -181,6 +181,12 @@ border-color: #007bff;
   background-color: #f4f4f4;
   border-color: #f4f4f4;
   color: gray;
+}
+/*-----------------------------
+            Pages
+------------------------------*/
+.user-photo iframe {
+  width: 100%;
 }
 /*-----------------------------
             Posts page
