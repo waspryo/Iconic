@@ -27,12 +27,16 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    if @post.user_id != current_user.id
+      redirect_to posts_path, alert: "You don't have permission"
+    end
   end
 
   # POST /posts
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
 
     respond_to do |format|
       if @post.save
@@ -76,11 +80,11 @@ class PostsController < ApplicationController
     end
 
     def is_authorised
-      redirect_to root_path, alert: "You don't have permission" unless current_user.id == current_user.id
+      redirect_to root_path, alert: "You don't have permission" unless current_user.id == @post.user_id
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:name, :age, :occupation, :content, :image, :location)
+      params.require(:post).permit(:name, :age, :occupation, :アウター, :トップス, :ボトムス, :バッグ, :アクセサリー, :comment, :image, :location)
     end
 end

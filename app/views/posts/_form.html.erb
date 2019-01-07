@@ -25,7 +25,22 @@
   </div>
 
   <div class="form-group">
-    <%= form.text_area :content, autofocus: true, placeholder: "内容(アイテム名、ブランドなど)", class: "form-control" %>
+    <%= form.text_area :アウター, autofocus: true, placeholder: "アウター", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.text_area :トップス, autofocus: true, placeholder: "トップス", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.text_area :ボトムス, autofocus: true, placeholder: "ボトムス", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.text_area :バッグ, autofocus: true, placeholder: "バッグ", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.text_area :アクセサリー, autofocus: true, placeholder: "アクセサリー", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.text_area :comment, autofocus: true, placeholder: "コメント", class: "form-control" %>
   </div>
 
   <div class="form-group">
@@ -39,8 +54,8 @@
   <div class="actions">
     <%= form.submit %>
   </div>
-  または<br>
-  <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-primary" %></td>
+  <!-- または<br>
+  <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' },  class: "btn btn-primary" %></td> -->
 <% end %>
 
 </div>

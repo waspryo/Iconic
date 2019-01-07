@@ -8,6 +8,9 @@ class Post < ApplicationRecord
      validates :occupation, presence: true
      validates :location, presence: true
 
+
+
+
    private
    def update_image_attributes
      if image.present? && image_changed?
