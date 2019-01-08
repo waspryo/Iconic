@@ -3,6 +3,9 @@ class Post < ApplicationRecord
    # serialize :image, JSON
      belongs_to :user, optional: true
 
+     geocoded_by :location
+     after_validation :geocode, if: :location_changed?
+
 
      validates :name, presence: true
      validates :age, presence: true

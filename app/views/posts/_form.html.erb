@@ -13,6 +13,9 @@
   <% end %>
 
   <div class="form-group">
+    <%= form.text_field :title, autofocus: true, placeholder: "タイトル", class: "form-control"%>
+  </div>
+  <div class="form-group">
     <%= form.text_field :name, autofocus: true, placeholder: "名前", class: "form-control"%>
   </div>
 
@@ -48,7 +51,7 @@
   </div>
 
   <div class="form-group">
-    <%= form.text_field :location, autofocus: true, placeholder: "撮影場所", class: "form-control" %>
+    <%= form.text_field :location, autofocus: true, placeholder: "撮影場所", class: "form-control", id: "autolocation" %>
   </div>
 
   <div class="actions">
@@ -59,3 +62,10 @@
 <% end %>
 
 </div>
+
+
+<script>
+  $(function() {
+    $("#autolocation").geocomplete();
+  });
+</script>

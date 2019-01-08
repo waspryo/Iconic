@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_06_135326) do
+ActiveRecord::Schema.define(version: 2019_01_08_035919) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"
@@ -20,15 +20,23 @@ ActiveRecord::Schema.define(version: 2019_01_06_135326) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.string "title"
     t.string "name"
     t.integer "age"
     t.string "occupation"
-    t.text "content"
+    t.string "アウター"
+    t.string "トップス"
+    t.string "ボトムス"
+    t.string "バッグ"
+    t.string "アクセサリー"
+    t.text "comment"
     t.string "image"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 

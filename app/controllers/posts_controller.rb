@@ -80,11 +80,11 @@ class PostsController < ApplicationController
     end
 
     def is_authorised
-      redirect_to root_path, alert: "You don't have permission" unless current_user.id == @post.user_id
+      redirect_to posts_path, alert: "You don't have permission" unless current_user.id == @post.user_id
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:name, :age, :occupation, :アウター, :トップス, :ボトムス, :バッグ, :アクセサリー, :comment, :image, :location)
+      params.require(:post).permit(:title, :name, :age, :occupation, :アウター, :トップス, :ボトムス, :バッグ, :アクセサリー, :comment, :image, :location, :latitude, :longitude)
     end
 end
