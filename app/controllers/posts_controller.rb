@@ -11,19 +11,20 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     # @posts = current_user.posts
+
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find(params[:id])
-    @posts = @post.image
+     @post = Post.find(params[:id])
 
   end
 
   # GET /posts/new
   def new
     @post = Post.new
+
   end
 
   # GET /posts/1/edit
@@ -86,6 +87,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :name, :age, :occupation, :アウター, :トップス, :ボトムス, :バッグ, :アクセサリー, :comment, :image, :location, :latitude, :longitude)
+      params.require(:post).permit(:title, :name, :age, :occupation, :アウター, :トップス, :ボトムス, :バッグ, :アクセサリー, :comment, :image, :location, :latitude, :longitude, :content, :user_id)
     end
 end

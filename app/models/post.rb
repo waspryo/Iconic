@@ -2,6 +2,7 @@ class Post < ApplicationRecord
    mount_uploader :image, ImageUploader
    # serialize :image, JSON
      belongs_to :user, optional: true
+     has_many :comments
 
      geocoded_by :location
      after_validation :geocode, if: :location_changed?

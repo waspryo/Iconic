@@ -1,6 +1,6 @@
 
 	<div class="content-box-lg">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="users-list">
 				<div class="row">
 						<div class="col-md-12">
@@ -9,10 +9,17 @@
 							</div>
 							<div class="row">
 								<div class="col-md-12">
-									
-									<% @posts.each do |post| %>
-									<%= image_tag post.image.to_s, class: "img-responsive"%>
-									<% end %>
+									<div class="card bg-dark text-white">
+
+								 	 <%= image_tag 'people/p12.jpg', :size =>'920x480', class: "img-responsive"%>
+
+	  <div class="card-img-overlay">
+	    <h5 class="card-title">Card title</h5>
+	    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+	    <p class="card-text">Last updated 3 mins ago</p>
+	  </div>
+	</div>
+
 								</div>
 							</div>
 						</div>

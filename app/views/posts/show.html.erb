@@ -19,12 +19,35 @@
       </p>
 
 
-      <%= link_to 'Edit', edit_post_path(@post),class: "btn btn-primary btn-large" %> |
-      <%= link_to '投稿一覧', posts_path, class: "btn btn-primary btn-large"%>
+
+
+      <h3>コメント</h3>
+      <% if @post.comments.any? %>
+      <ul>
+        <% @post.comments.each do |comment| %>
+        <li>
+          <%= comment.created_at %>
+        </li>
+        <li>
+          <%= comment.content %>
+          <%= link_to 'Destroy', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+      <%= form_for([@post, @post.comments.build]) do |form| %>
+      <div class="form-group">
+        <%= form.text_field :content, autofocus: true, placeholder: "コメント", class: "form-control"%>
+      </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+      <% end %>
 
 
 
     </div>
+
 
     <div class="col-md-3">
       <div class="person-lists">
@@ -233,6 +256,8 @@
     <div class="col-md-12">
         <br><br>
       <h1>hello</h1>
+      <%= link_to 'Edit', edit_post_path(@post),class: "btn btn-primary btn-large" %> |
+      <%= link_to '投稿一覧', posts_path, class: "btn btn-primary btn-large"%>
     </div>
 
 
