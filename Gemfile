@@ -58,3 +58,5 @@ gem 'omniauth-google-oauth2'
 gem 'fog'
 gem 'geocoder'
 gem 'geocomplete_rails'
+
+gem 'bxslider-rails'

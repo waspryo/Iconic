@@ -1,47 +1,48 @@
 <div id="create-form">
-  <div class="content-box-lg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
+  <!-- <div class="content-box-lg"> -->
+  <div class="container">
+    <div class="row">
+      <div class="content-box-lg">
 
-        </div>
+      </div>
 
-        <div class="col-md-4 text-center">
-          <div class="create-new-post">
 
-            <h1>How to use</h1>
-            <!-- Button trigger modal -->
-            <div class="row">
-  <div class="col-4">
-    <div class="list-group" id="list-tab" role="tablist">
-      <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">書き方</a>
-      <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">写真</a>
-      <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">コメント</a>
-      <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">撮影場所</a>
-    </div>
-  </div>
-  <div class="col-8">
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><br><br>書ける範囲でOK！<br><br>みんながあなたの私服が気になっています。詳しく書いてあげると参考になるから細かく書いてあげてね。</div>
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">あなたのお気に入りのインスタ映えスポットをみんなにシェアしよう！<br><br>できるだけ詳しく書いてあげるとあなたのスポットが地図に表示されるよ！！撮影場所の記入例: (渋谷 スクランブル交差点、スタバ〇〇店、原宿〇〇店)</div>
-      <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><br><br>コメント欄にあなたについて書いてあげよう！自己紹介やインスタやツイッターのIDなど載せたりみんなにアピールしよう！！</div>
-      <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">あなたのお気に入りのインスタ映えスポットをみんなにシェアしよう！<br><br>できるだけ詳しく書いてあげるとあなたのスポットが地図に表示されるよ！！撮影場所の記入例: (渋谷 スクランブル交差点、スタバ〇〇店、原宿〇〇店)</div>
-    </div>
-  </div>
-</div>
+      <div class="col-md-4 text-center">
+        <div class="create-new-post">
+
+          <h1>How to use</h1>
+          <!-- Button trigger modal -->
+          <div class="row">
+            <div class="col-4">
+              <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">書き方</a>
+                <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">写真</a>
+                <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">コメント</a>
+                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">撮影場所</a>
+              </div>
+            </div>
+            <div class="col-8">
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list"><br><br>書ける範囲でOK！<br><br>みんながあなたの私服が気になっています。詳しく書いてあげると参考になるから細かく書いてあげてね。</div>
+                <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">あなたのお気に入りのインスタ映えスポットをみんなにシェアしよう！<br><br>できるだけ詳しく書いてあげるとあなたのスポットが地図に表示されるよ！！撮影場所の記入例: (渋谷 スクランブル交差点、スタバ〇〇店、原宿〇〇店)</div>
+                <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list"><br><br>コメント欄にあなたについて書いてあげよう！自己紹介やインスタやツイッターのIDなど載せたりみんなにアピールしよう！！</div>
+                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">あなたのお気に入りのインスタ映えスポットをみんなにシェアしよう！<br><br>できるだけ詳しく書いてあげるとあなたのスポットが地図に表示されるよ！！撮影場所の記入例: (渋谷 スクランブル交差点、スタバ〇〇店、原宿〇〇店)</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-        <div class="col-md-8 text-center">
-          <div class="create-new-post">
-             <h1>New Post</h1>
+      <div class="col-md-8 text-center">
+        <div class="create-new-post">
+          <h1>New Post</h1>
 
-<%= render 'form', post: @post %>
+          <%= render 'form', post: @post %>
 
-<%= link_to 'Back', posts_path %>
+          <%= link_to 'Back', posts_path %>
         </div>
       </div>
     </div>
   </div>
 
-</div>
+  <!-- </div> -->

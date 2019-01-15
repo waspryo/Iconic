@@ -9,44 +9,15 @@
   </div>
   <div class="row">
     <div class="col-md-9 text-center">
-      <div class="title">
-
+      <div class="person-details">
+        <p id="notice"><%= notice %></p>
+        <h3><%= @post.title %></h3>
+        <p>
+          <%= image_tag @post.image.url %>
+        </p>
       </div>
-      <p id="notice"><%= notice %></p>
-      <h3><%= @post.title %></h3>
-      <p>
-        <%= image_tag @post.image.url %>
-      </p>
-
-
-
-
-      <h3>コメント</h3>
-      <% if @post.comments.any? %>
-      <ul>
-        <% @post.comments.each do |comment| %>
-        <li>
-          <%= comment.created_at %>
-        </li>
-        <li>
-          <%= comment.content %>
-          <%= link_to 'Destroy', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
-        </li>
-        <% end %>
-      </ul>
-      <% end %>
-      <%= form_for([@post, @post.comments.build]) do |form| %>
-      <div class="form-group">
-        <%= form.text_field :content, autofocus: true, placeholder: "コメント", class: "form-control"%>
-      </div>
-      <div class="actions">
-        <%= form.submit %>
-      </div>
-      <% end %>
-
-
-
     </div>
+
 
 
     <div class="col-md-3">
@@ -262,4 +233,34 @@
 
 
   </div>
+</div>
+<div class="col-md-9 text-center">
+  <div class="content-box-lg">
+    <div class="comment-lists">
+      <h3>コメント</h3>
+      <% if @post.comments.any? %>
+      <ul>
+        <% @post.comments.each do |comment| %>
+        <li>
+          <strong><%= comment.name %></strong>
+          <%= comment.content %>
+          <%# <%= link_to 'Destroy', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </li>
+        <% end %>
+      </ul>
+      <% end %>
+      <%= form_for([@post, @post.comments.build]) do |form| %>
+      <div class="form-group">
+        <%= form.text_field :name, autofocus: true, placeholder: "名前", class: "form-control"%>
+        <%= form.text_field :content, autofocus: true, placeholder: "コメント", class: "form-control"%>
+      </div>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+
+
 </div>

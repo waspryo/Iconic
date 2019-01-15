@@ -11,4 +11,8 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  def show
+    @posts = Post.all
+  end
+
 end
