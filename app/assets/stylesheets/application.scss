@@ -11,12 +11,12 @@
   p:        font-family: 'Quicksand', sans-serif;
   -----------------------------------
   Colors:
-      Moon Yellow:        #f4c613
-      Gray:               #212226
-      white Smoke:        #f4f4f4
+      SUNSET ORANGE:      #EB5E55
+      JET:                #3A3335
+      DOGWOOD ROSE:       #D81E5B
       white:              #fff
-      Black:              #000
-      Dark gray :         #36353c;
+      PAPAYA WHIP:        #FDF0D5
+      CLOMBIA BLUE :      #C6D8D3
 ===================================*/
 /*===================================
               Html, body
@@ -48,6 +48,9 @@ p {
 section {
   background: #fff;
   overflow: hidden;
+}
+.card-body a {
+  color: #3A3335;
 }
 /*===================================
               Content Boxes
@@ -156,6 +159,9 @@ font-size: 16px;
 border-radius: 4px;
 padding: 8px;
 }
+.btn-facebook:hover {
+  color: #fff;
+}
 
 /* login */
 #log_in-form {
@@ -218,9 +224,10 @@ padding-top: 20px;
   top: 18px;
 }
 .btn-primary {
-  color: #fff;
-background-color: #007bff;
-border-color: #007bff;
+  border-color: inherit;
+  box-shadow: none;
+background-color: #3FA9F5;
+color: #fff;
 }
 .btn-info {
   background-color: #f4f4f4;
@@ -290,21 +297,70 @@ border-color: #007bff;
 // // .list-item-details text-center:hover  .list-item-overlay {
 // // opacity: 1;
 // // }
+
+/* personal photo */
+.person-details img {
+  max-width: 640px;
+  max-height: 940px;
+}
+.pagination  {
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+.pagination a {
+  font-size: 15px;
+  color: #3A3335;
+}
+.page > active a {
+  font-size: 25px;
+  color: #3A3335;
+  border-bottom: 1px solid #000;
+}
 /*-----------------------------
             Comment
 ------------------------------*/
-.comment-lists {
-  // border: 1px solid;
+.comment-lists h3 {
+font-size: 18px;
+ font-family: 'Cinzel', serif;
+ margin: 0;
+ padding-left: 10px;
 }
 .comment-lists ul {
   list-style: none;
   text-align: left;
+  padding-left: 14px;
 }
 .comment-lists .form-control {
   display: inline-block;
   width: 70%;
 }
-
+.comment-form .form-control {
+  width: 100%;
+  border: 0;
+  border-color: inherit;
+  box-shadow: none;
+}
+.comment-form .form-control:hover {
+  background-color: #f4f4f4;
+ width: 100%;
+ left: 0;
+ border-radius: 5px;
+ transition: all 0.4s ease;
+}
+/* Comment submit button */
+button, [type="button"], [type="reset"], [type="submit"] {
+border: 0;
+color: #000;
+ font-family: 'Quicksand', sans-serif;
+}
+.card-body-modified {
+  text-align: right;
+  color: #000;
+}
+.card-body-modified a {
+  color: #000;
+}
+/* Icons */
 /*-----------------------------
             Posts page
 ------------------------------*/
@@ -581,3 +637,23 @@ footer p {
 	width: 200px;
 	margin: auto;
 }
+
+/*-----------------------------
+            SEARCH
+------------------------------*/
+// #main {
+//   height: 100%;
+//   overflow: hidden;
+// }
+// #search-top {
+//   overflow: scroll;
+//   width: 100%;
+// }
+// #search-down {
+//
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   height: 450px;
+// }

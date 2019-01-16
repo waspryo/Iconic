@@ -23,8 +23,8 @@
 								<!-- <div class="bxslider"> -->
 									<% @posts.each do |post| %>
 										<div class="col-md-2">
-										<%= image_tag post.image.to_s, class: "img-responsive"%>
-										 <div class="list-item-overlay"> <div class="list-item-details text-center"> <h3><%= post.location %> |  <%= post.name %></h3> </div> </div> 
+										<%= link_to (image_tag post.image.to_s), posts_path, class: "img-responsive"%>
+										 <div class="list-item-overlay"> <div class="list-item-details text-center"> <h3><%= post.location %> |  <%= link_to post.name, posts_path(post.id) %></h3> </div> </div>
 										 </div>
 									<% end %>
 								<!-- </div> -->
@@ -37,7 +37,6 @@
 			</div>
 		</div>
 	</div>
-
 </div>
 
 <script>

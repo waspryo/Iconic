@@ -9,16 +9,14 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.page(params[:page]).per(2).order(:id)
     # @posts = current_user.posts
-
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
      @post = Post.find(params[:id])
-
   end
 
   # GET /posts/new

@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 
   def create
     @post = Post.find(params[:post_id])
-    if @post.comments.nil?
+    if @comment.nil?
       @post.comments.create(comment_params)
       flash[:notice] = "コメントが投稿できました"
     else

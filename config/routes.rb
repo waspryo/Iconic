@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get "posts/_form"
   get "posts/edit"
 
+  get 'search' => 'pages#search'
+
   get 'pages/home'
   get 'pages/show'
   get 'pages/contact'

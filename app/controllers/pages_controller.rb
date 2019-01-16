@@ -11,4 +11,8 @@ class PagesController < ApplicationController
       @posts = Post.all
   end
 
+  def search
+      @posts = Post.all
+  end
+
 end
