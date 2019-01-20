@@ -9,12 +9,13 @@
   <div id="search-down">
     <div class="row">
       <div class="col-md-12">
+        <% @posts.each do |post| %>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFgIIopBogLXCey9WtcwT5A_ONlu3rnbg&callback=initMap"></script>
         <div id="map" style="width: 100%; height: 400px">
           <script>
             $(window).on('load', function () {
               // Map variables
-              var location = {lat: <%= @post.latitude %>, lng: <%= @post.longitude %>};
+              var location = {lat: <%= post.latitude %>, lng: <%= post.longitude %>};
               // var myLatlng = {
               //   lat: 40.712742,
               //   lng: -74.005966
@@ -189,14 +190,14 @@
 
               // 5. Show the picture
               var infoWindow = new google.maps.InfoWnidow({
-                content: '<div id="content"><%= image_tag @post.image.url %></div>'
+                content: '<div id="content"><%= image_tag post.image.url %></div>'
                 });
                 infoWindow.open(map, maker);
 
             });
           </script>
       </div>
+      <% end %>
     </div>
   </div>
 </div>
-<br><br><br>

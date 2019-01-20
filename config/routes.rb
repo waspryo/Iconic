@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :posts do
     resources :comments, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
   end
   resources :pages
   post "posts/new"

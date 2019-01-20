@@ -3,6 +3,8 @@ class Post < ApplicationRecord
    # serialize :image, JSON
      belongs_to :user, optional: true
      has_many :comments
+     has_many :likes
+     has_many :liked_user, through: :likes, source: :user
 
      geocoded_by :location
      after_validation :geocode, if: :location_changed?

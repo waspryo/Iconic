@@ -20,61 +20,56 @@
             <div class="card" style="width:700px;">
               <%= image_tag post.image.to_s, class: "img-responsive"%>
               <div class="row">
-                <div class="col-1">
-                  <div class="card-body">
-                    <input type="checkbox" id="checkbox"/>
-                    <label for="checkbox">
-                      <svg id="heart-svg" viewbox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
-                        <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
-                          <path d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" id="heart" fill="#AAB8C2"/>
-                          <circle id="main-circ" fill="#E2264D" opacity="0" cx="29.5" cy="29.5" r="1.5"/>
 
-                          <g id="grp7" opacity="0" transform="translate(7 6)">
-                            <circle id="oval1" fill="#9CD8C3" cx="2" cy="6" r="2"/>
-                            <circle id="oval2" fill="#8CE8C3" cx="5" cy="2" r="2"/>
-                          </g>
-
-                          <g id="grp6" opacity="0" transform="translate(0 28)">
-                            <circle id="oval1" fill="#CC8EF5" cx="2" cy="7" r="2"/>
-                            <circle id="oval2" fill="#91D2FA" cx="3" cy="2" r="2"/>
-                          </g>
-
-                          <g id="grp3" opacity="0" transform="translate(52 28)">
-                            <circle id="oval2" fill="#9CD8C3" cx="2" cy="7" r="2"/>
-                            <circle id="oval1" fill="#8CE8C3" cx="4" cy="2" r="2"/>
-                          </g>
-
-                          <g id="grp2" opacity="0" transform="translate(44 6)">
-                            <circle id="oval2" fill="#CC8EF5" cx="5" cy="6" r="2"/>
-                            <circle id="oval1" fill="#CC8EF5" cx="2" cy="2" r="2"/>
-                          </g>
-
-                          <g id="grp5" opacity="0" transform="translate(14 50)">
-                            <circle id="oval1" fill="#91D2FA" cx="6" cy="5" r="2"/>
-                            <circle id="oval2" fill="#91D2FA" cx="2" cy="2" r="2"/>
-                          </g>
-
-                          <g id="grp4" opacity="0" transform="translate(35 50)">
-                            <circle id="oval1" fill="#F48EA7" cx="6" cy="5" r="2"/>
-                            <circle id="oval2" fill="#F48EA7" cx="2" cy="2" r="2"/>
-                          </g>
-
-                          <g id="grp1" opacity="0" transform="translate(24)">
-                            <circle id="oval1" fill="#9FC7FA" cx="2.5" cy="3" r="2"/>
-                            <circle id="oval2" fill="#9FC7FA" cx="7.5" cy="2" r="2"/>
-                          </g>
-                        </g>
-                      </svg>
-                    </label>
-
-
-                  </div>
-                </div>
-                <div class="col-1">
-                  <i class="far fa-comment-dots fa-2x"></i>
-                </div>
               </div>
-              <p class="card-text"><%= post.comment %>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              <div class="card-body">
+                <input type="checkbox" id="checkbox"/>
+                <label for="checkbox">
+                  <svg id="heart-svg" viewbox="467 392 58 57" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Group" fill="none" fill-rule="evenodd" transform="translate(467 392)">
+                      <path d="M29.144 20.773c-.063-.13-4.227-8.67-11.44-2.59C7.63 28.795 28.94 43.256 29.143 43.394c.204-.138 21.513-14.6 11.44-25.213-7.214-6.08-11.377 2.46-11.44 2.59z" id="heart" fill="#AAB8C2"/>
+                      <circle id="main-circ" fill="#E2264D" opacity="0" cx="29.5" cy="29.5" r="1.5"/>
+
+                      <g id="grp7" opacity="0" transform="translate(7 6)">
+                        <circle id="oval1" fill="#9CD8C3" cx="2" cy="6" r="2"/>
+                        <circle id="oval2" fill="#8CE8C3" cx="5" cy="2" r="2"/>
+                      </g>
+
+                      <g id="grp6" opacity="0" transform="translate(0 28)">
+                        <circle id="oval1" fill="#CC8EF5" cx="2" cy="7" r="2"/>
+                        <circle id="oval2" fill="#91D2FA" cx="3" cy="2" r="2"/>
+                      </g>
+
+                      <g id="grp3" opacity="0" transform="translate(52 28)">
+                        <circle id="oval2" fill="#9CD8C3" cx="2" cy="7" r="2"/>
+                        <circle id="oval1" fill="#8CE8C3" cx="4" cy="2" r="2"/>
+                      </g>
+
+                      <g id="grp2" opacity="0" transform="translate(44 6)">
+                        <circle id="oval2" fill="#CC8EF5" cx="5" cy="6" r="2"/>
+                        <circle id="oval1" fill="#CC8EF5" cx="2" cy="2" r="2"/>
+                      </g>
+
+                      <g id="grp5" opacity="0" transform="translate(14 50)">
+                        <circle id="oval1" fill="#91D2FA" cx="6" cy="5" r="2"/>
+                        <circle id="oval2" fill="#91D2FA" cx="2" cy="2" r="2"/>
+                      </g>
+
+                      <g id="grp4" opacity="0" transform="translate(35 50)">
+                        <circle id="oval1" fill="#F48EA7" cx="6" cy="5" r="2"/>
+                        <circle id="oval2" fill="#F48EA7" cx="2" cy="2" r="2"/>
+                      </g>
+
+                      <g id="grp1" opacity="0" transform="translate(24)">
+                        <circle id="oval1" fill="#9FC7FA" cx="2.5" cy="3" r="2"/>
+                        <circle id="oval2" fill="#9FC7FA" cx="7.5" cy="2" r="2"/>
+                      </g>
+                    </g>
+                  </svg>
+                </label>
+
+
+              </div><p class="card-text"><%= post.comment %>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
                 ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br><br><br><br>
 
               <div class="comment-lists">
@@ -135,16 +130,201 @@
             <li class="list-group-item">Location:
               <%= post.location %></li>
           </ul>
-          <br><br><br>
+          <% @posts.each do |post| %>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFgIIopBogLXCey9WtcwT5A_ONlu3rnbg&callback=initMap"></script>
+          <div id="map" style="width: 100%; height: 400px">
+            <script>
+              $(window).on('load', function () {
+                // Map variables
+                var location = {lat: <%= post.latitude %>, lng: <%= post.longitude %>};
+                // var myLatlng = {
+                //   lat: 40.712742,
+                //   lng: -74.005966
 
+
+                // 1. Render Google Map
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 14,
+                  center: location,
+                  styles: [
+                    {
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#242f3e'
+                        }
+                      ]
+                    }, {
+                      elementType: 'labels.text.stroke',
+                      stylers: [
+                        {
+                          color: '#242f3e'
+                        }
+                      ]
+                    }, {
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#746855'
+                        }
+                      ]
+                    }, {
+                      featureType: 'administrative.locality',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#d59563'
+                        }
+                      ]
+                    }, {
+                      featureType: 'poi',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#d59563'
+                        }
+                      ]
+                    }, {
+                      featureType: 'poi.park',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#263c3f'
+                        }
+                      ]
+                    }, {
+                      featureType: 'poi.park',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#6b9a76'
+                        }
+                      ]
+                    }, {
+                      featureType: 'road',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#38414e'
+                        }
+                      ]
+                    }, {
+                      featureType: 'road',
+                      elementType: 'geometry.stroke',
+                      stylers: [
+                        {
+                          color: '#212a37'
+                        }
+                      ]
+                    }, {
+                      featureType: 'road',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#9ca5b3'
+                        }
+                      ]
+                    }, {
+                      featureType: 'road.highway',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#746855'
+                        }
+                      ]
+                    }, {
+                      featureType: 'road.highway',
+                      elementType: 'geometry.stroke',
+                      stylers: [
+                        {
+                          color: '#1f2835'
+                        }
+                      ]
+                    }, {
+                      featureType: 'road.highway',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#f3d19c'
+                        }
+                      ]
+                    }, {
+                      featureType: 'transit',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#2f3948'
+                        }
+                      ]
+                    }, {
+                      featureType: 'transit.station',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#d59563'
+                        }
+                      ]
+                    }, {
+                      featureType: 'water',
+                      elementType: 'geometry',
+                      stylers: [
+                        {
+                          color: '#17263c'
+                        }
+                      ]
+                    }, {
+                      featureType: 'water',
+                      elementType: 'labels.text.fill',
+                      stylers: [
+                        {
+                          color: '#515c6d'
+                        }
+                      ]
+                    }, {
+                      featureType: 'water',
+                      elementType: 'labels.text.stroke',
+                      stylers: [
+                        {
+                          color: '#17263c'
+                        }
+                      ]
+                    }
+                  ]
+                });
+                // 2. Add marker
+                var marker = new google.maps.Marker({position: location, map: map, title: "Click To See Address"});
+                // 3. Add Info Window
+                var infowindow = new google.maps.InfoWindow({content: addressString});
+
+                // Show info window when user clicks marker
+                marker.addListener('click', function () {
+                  infowindow.open(map, marker);
+                });
+
+                // 4. resize Function
+                google.maps.event.addDomListener(window, 'resize', function () {
+
+                  var center = map.getCenter();
+                  google.maps.event.trigger(map, 'resize');
+                  map.setCenter(center);
+                });
+
+                // 5. Show the picture
+                var infoWindow = new google.maps.InfoWnidow({
+                  content: '<div id="content"><%= image_tag post.image.url %></div>'
+                  });
+                  infoWindow.open(map, maker);
+
+              });
+            </script>
+          <br><br><br>
         </div>
-      <% end %>
-      <%= paginate(@posts) %>
+        <% end %>
     </div>
     <hr/>
-
+<% end %>
   </div>
-
+<%= paginate(@posts) %>
 </div>
 </div>
 
