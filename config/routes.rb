@@ -16,7 +16,6 @@ Rails.application.routes.draw do
 
   get 'search' => 'pages#search'
 
-  get 'pages/home'
   get 'pages/show'
   get 'pages/contact'
   root 'pages#home'
