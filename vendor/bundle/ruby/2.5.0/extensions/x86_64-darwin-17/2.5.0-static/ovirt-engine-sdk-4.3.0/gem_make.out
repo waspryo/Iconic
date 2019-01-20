@@ -1,0 +1,48 @@
+current directory: /Users/wasp/Desktop/Iconic/IconU/vendor/bundle/ruby/2.5.0/gems/ovirt-engine-sdk-4.3.0/ext/ovirtsdk4c
+/Users/wasp/.rbenv/versions/2.5.0/bin/ruby -r ./siteconf20190120-75919-1tnsrbx.rb extconf.rb
+checking for xml2-config... yes
+checking for curl-config... yes
+creating Makefile
+
+current directory: /Users/wasp/Desktop/Iconic/IconU/vendor/bundle/ruby/2.5.0/gems/ovirt-engine-sdk-4.3.0/ext/ovirtsdk4c
+make "DESTDIR=" clean
+
+current directory: /Users/wasp/Desktop/Iconic/IconU/vendor/bundle/ruby/2.5.0/gems/ovirt-engine-sdk-4.3.0/ext/ovirtsdk4c
+make "DESTDIR="
+compiling ov_error.c
+compiling ov_http_client.c
+compiling ov_http_request.c
+compiling ov_http_response.c
+compiling ov_http_transfer.c
+compiling ov_module.c
+compiling ov_string.c
+compiling ov_xml_reader.c
+compiling ov_xml_writer.c
+ov_xml_writer.c:184:46: warning: incompatible pointer to integer conversion initializing 'const VALUE' (aka 'const unsigned long') with an expression of type 'void *' [-Wint-conversion]
+    return rb_funcall(ptr->io, STRING_ID, 0, NULL);
+                                             ^~~~
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include/stddef.h:105:16: note: expanded from macro 'NULL'
+#  define NULL ((void*)0)
+               ^~~~~~~~~~
+/Users/wasp/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/ruby.h:2466:35: note: expanded from macro 'rb_funcall'
+        const VALUE rb_funcall_args[] = {__VA_ARGS__}; \
+                                         ^~~~~~~~~~~
+ov_xml_writer.c:184:12: warning: division by zero is undefined [-Wdivision-by-zero]
+    return rb_funcall(ptr->io, STRING_ID, 0, NULL);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/wasp/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/ruby.h:2470:6: note: expanded from macro 'rb_funcall'
+            rb_varargs_argc_check(rb_funcall_argc, rb_funcall_nargs), \
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/wasp/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/ruby.h:1775:3: note: expanded from macro 'rb_varargs_argc_check'
+         rb_varargs_bad_length(argc, vargc)), \
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/wasp/.rbenv/versions/2.5.0/include/ruby-2.5.0/ruby/ruby.h:1770:56: note: expanded from macro 'rb_varargs_bad_length'
+#     define rb_varargs_bad_length(argc, vargc) ((argc)/((argc) == (vargc)))
+                                                       ^~~~~~~~~~~~~~~~~~~~
+2 warnings generated.
+compiling ovirtsdk4c.c
+linking shared-object ovirtsdk4c.bundle
+
+current directory: /Users/wasp/Desktop/Iconic/IconU/vendor/bundle/ruby/2.5.0/gems/ovirt-engine-sdk-4.3.0/ext/ovirtsdk4c
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ovirtsdk4c.bundle ./.gem.20190120-75919-72ddk6
