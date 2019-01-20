@@ -20,7 +20,7 @@ class User < ApplicationRecord
    unless user
      user = User.create(
        fullname: auth.info.name,
-       provider:  auth.provider,
+       # provider:  auth.provider,
        uid:      auth.uid,
        provider: auth.provider,
        image:    auth.info.image,
