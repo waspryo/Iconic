@@ -287,8 +287,9 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
+    config.omniauth :facebook, '555881688214981 ','e7ee2e1916f5ae9814969473d7193fad',scope: 'email',info_fields: 'email, name',callback_url:"https://quiet-badlands-92745.herokuapp.com/auth/facebook/callback"
 
-    config.omniauth :facebook, '555881688214981','e7ee2e1916f5ae9814969473d7193fad'
+    # config.omniauth :facebook, '555881688214981','e7ee2e1916f5ae9814969473d7193fad'
 
 
 end
