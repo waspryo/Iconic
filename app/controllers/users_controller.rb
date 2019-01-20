@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  has_many :posts
+
 
   def show
      @user = User.find(params[:id])
