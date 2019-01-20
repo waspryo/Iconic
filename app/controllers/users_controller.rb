@@ -1,4 +1,4 @@
-class UsersController < ApplicationControllerprivate
+class UsersController < ApplicationController
 
   has_many :posts
 
