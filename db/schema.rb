@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_17_063926) do
+ActiveRecord::Schema.define(version: 2019_01_22_080010) do
 
   create_table "comments", force: :cascade do |t|
     t.string "name"
@@ -35,12 +35,6 @@ ActiveRecord::Schema.define(version: 2019_01_17_063926) do
     t.string "name"
     t.integer "age"
     t.string "occupation"
-    t.string "アウター"
-    t.string "トップス"
-    t.string "ボトムス"
-    t.string "バッグ"
-    t.string "アクセサリー"
-    t.text "comment"
     t.string "image"
     t.string "location"
     t.datetime "created_at", null: false
@@ -49,6 +43,12 @@ ActiveRecord::Schema.define(version: 2019_01_17_063926) do
     t.float "latitude"
     t.float "longitude"
     t.string "content"
+    t.string "アウター"
+    t.string "トップス"
+    t.string "ボトムス"
+    t.string "バッグ"
+    t.string "アクセサリー"
+    t.text "comment"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
