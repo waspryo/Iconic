@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ Iconicはファッションコーデを共有できるサイトです！
 
-Things you may want to cover:
+# 機能
 
-* Ruby version
+* Deviceによるログイン認証機能
 
-* System dependencies
+* コメント機能
 
-* Configuration
+* ページネーション
 
-* Database creation
+* carrierwaveによる画像投稿機能
 
-* Database initialization
+* GoogleMap
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
